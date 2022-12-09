@@ -1,0 +1,2934 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #1b1b1b;
+    overflow-x: hidden;
+}
+/*----MAIN----*/
+
+.main-content {
+    height: 100vh;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(FRIENDS-FREN.png) no-repeat 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 0 1%;
+}
+
+.content {
+    position:absolute;
+    font-weight: lighter;
+    left: 50%;
+    top: 45%;
+    width: 30%;
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.content h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+    padding-top:15px;
+    padding-bottom: 15px;
+    font-weight: 100;
+
+}
+
+.icon-list {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 40px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.icon:hover {
+    box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+}
+
+.icon p {
+    color: white;
+    padding-top: 5px;
+    font-weight: 200;
+}
+
+/*----ABOUT----*/
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #1b1b1b;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2 {
+    color:white;
+    font-size: 75px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: antiquewhite;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    font-weight: 3px;
+    text-align: left;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid #1b1b1b;
+    background: rgb(12, 9, 5);
+    transition: 1s;
+}
+
+/*----NAV----*/
+
+nav{
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+nav ul{
+  float: right;
+  padding-top: 20px;
+  margin-right: 100px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  margin: 0 5px;
+}
+nav ul li a {
+    color:white;
+    font-weight: 300;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    background: white;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transition: width 0.5s;
+
+}
+nav ul li a:hover{
+  color: white;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.boxes,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+/*----FA----*/
+
+.fa-arrow-pointer {
+    margin-left: 10px;
+}
+
+
+.fa-arrow-right {
+    margin-top: 3px;
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.fa-angle-down {
+    margin-left: 7px;
+    font-size: 15px;
+
+}
+
+.fa-user {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-star-of-life {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-puzzle-piece {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-link {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-arrow-up {
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 200px;
+    margin-bottom: 50px;
+}
+
+/*----FRIENDS----*/
+
+.life {
+    width: 100%;
+    height: 125vh;
+    margin: auto;
+    background:#1b1b1b;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+.box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.box2 {
+    position:relative;
+    bottom: 185px;
+    left: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+}
+
+/*HIGHSCHOOL*/
+
+.life h1 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+
+.life h5 {
+    position: relative;
+    bottom: 100px;
+    left: 200px;
+    color:white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.life h6 {
+    position: relative;
+    right: 190px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.life h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+
+.card01 {
+    background: url(FRIENDS/01.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card02 {
+    background: url(FRIENDS/02.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card04 {
+    background: url(FRIENDS/03.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card05 {
+    background: url(FRIENDS/04.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*SHS*/
+
+.life2 {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background:#1b1b1b;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+.life2 h1 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+
+.life2 h5 {
+    position: relative;
+    bottom: 310px;
+    left: -150px;
+    color:white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.life2 h6 {
+    position: relative;
+    bottom: 200px;
+    right: 540px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.life2 h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+
+.card6 {
+    background: url(FRIENDS/05.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card7 {
+    background: url(FRIENDS/06.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card9 {
+    background: url(FRIENDS/07.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card10 {
+    background: url(FRIENDS/08.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box3 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-right: 150px;
+}
+
+.box4 {
+    position:relative;
+    bottom: 185px;
+    right: 150px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/**/
+
+
+/*COLLEGE*/
+
+.life3 {
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    background:#1b1b1b;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 200px;
+}
+
+.life3 h1 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+
+.life2 h5 {
+    position: relative;
+    bottom: 310px;
+    left: -150px;
+    color:white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.life2 h6 {
+    position: relative;
+    bottom: 200px;
+    right: 540px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.life3 h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+.card21 {
+    background: url(FRIENDS/09.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card22 {
+    background: url(FRIENDS/10.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card23 {
+    background: url(FRIENDS/11.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card24 {
+    background: url(FRIENDS/12.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box5 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.box6 {
+    position:relative;
+    bottom: 185px;
+    left: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+
+/*life4*/
+
+.life4 {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background:#1b1b1b;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+.cardd {
+    height: 300px;
+    width: 400px;
+    padding: 20px 35px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.life4 h3 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+
+.card11 {
+    background: url(mememe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card12 {
+    background: url(family.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card13 {
+    background: url(friend.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card14 {
+    background: url(games.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card15 {
+    background: url(music.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card16 {
+    background: url(movie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box101 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+}
+
+.box102 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 150px;
+}
+
+
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 20%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+
+
+
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+a {
+    color:white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+/*----FOOTER----*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(genshin.jpg) no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+footer p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5px;
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+/*RESPONSIVE*/
+
+@media all and (max-width: 900px) {
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background: #1b1b1b;
+        overflow-x: hidden;
+    }
+
+    /*NAV*/
+
+    nav {
+        background: #1b1b1b;
+        width: 104%;
+        position: relative;
+        right: 10px;
+        z-index: 1000;
+        transition: all .5s;
+    }
+    
+
+    nav ul li a::after {
+        content: '';
+        background: white;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+        transition: width 0.5s;
+    
+    }
+    
+    nav ul{
+        margin-right: 0px;
+        float: left;
+      }
+      nav .logo{
+        padding-left: 30px;
+        width: 100%;
+      }
+      .show + a, ul{
+        display: none;
+      }
+      nav ul li,nav ul ul li{
+        display: block;
+        width: 100%;
+      }
+      nav ul li a:hover{
+        box-shadow:#fff;
+      }
+      .show{
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+        font-weight:bold;
+      }
+      .show:hover{
+        color: white;
+      }
+      .boxes{
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        padding-top: 20px;
+        font-size: 25px;
+      }
+      nav ul ul{
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      nav ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul li{
+        position: static;
+      }
+      [id^=btn]:checked + ul{
+        display: block;
+      }
+      nav ul ul li{
+        
+      }
+      span.cancel:before{
+        content: '\f00d';
+      }
+
+      .main-content {
+        height: 100vh;
+        background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(FRIENDS-FREN.png) no-repeat 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        padding: 0 1%;
+    }
+    
+    .content {
+        position:absolute;
+        font-weight: lighter;
+        left: 50%;
+        top: 45%;
+        width: 50%;
+        max-width: 400px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        letter-spacing: 5px;
+        color: white;
+        padding-bottom: 15px;
+    }
+    
+    .content h2 {
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: white;
+        padding-top:15px;
+        padding-bottom: 15px;
+        font-weight: 100;
+    
+    }
+    
+    .icon-list {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-top: 40px;
+    }
+    
+    .icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.15);
+        margin: 0 10px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    
+    .icon:hover {
+        box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+    }
+    
+    .icon p {
+        color: white;
+        padding-top: 5px;
+        font-weight: 200;
+    }
+
+    /*HIGHSCHOOL*/
+
+.life h1 {
+    color: white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+
+.life h5 {
+    position: relative;
+    bottom: 100px;
+    left: 200px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.life h6 {
+    position: relative;
+    right: 190px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.life h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+
+.card01 {
+    background: url(FRIENDS/01.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card02 {
+    background: url(FRIENDS/02.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card04 {
+    background: url(FRIENDS/03.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card05 {
+    background: url(FRIENDS/04.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-left: 130px;
+}
+
+.box2 {
+    position:relative;
+    bottom: 185px;
+    left: 130px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.box3 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-right: 120px;
+}
+
+.box4 {
+    position:relative;
+    bottom: 185px;
+    right: 120px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.box5 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 200px;
+    margin-left: 130px;
+    position: relative;
+}
+
+.box6 {
+    position:relative;
+    bottom: 385px;
+    left: 130px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+/*life4*/
+
+.life4 {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background:#1b1b1b;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cardd {
+    height: 200px;
+    width: 350px;
+    padding: 20px 35px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.life4 h3 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+
+.card11 {
+    background: url(mememe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card12 {
+    background: url(family.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card13 {
+    background: url(friend.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card14 {
+    background: url(games.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card15 {
+    background: url(music.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card16 {
+    background: url(movie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box101 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+}
+
+.box102 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 150px;
+}
+
+
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 20%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+
+
+
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+a {
+    color:white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+/*----FOOTER----*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(genshin.jpg) no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+footer p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5px;
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 8%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+}
+
+@media all and (max-width: 768px) {
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background: #1b1b1b;
+        overflow-x: hidden;
+    }
+
+    /*NAV*/
+
+    nav {
+        background: #1b1b1b;
+        width: 104%;
+        position: relative;
+        right: 10px;
+        z-index: 1000;
+        transition: all .5s;
+    }
+    
+
+    nav ul li a::after {
+        content: '';
+        background: white;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+        transition: width 0.5s;
+    
+    }
+    
+    nav ul{
+        margin-right: 0px;
+        float: left;
+      }
+      nav .logo{
+        padding-left: 30px;
+        width: 100%;
+      }
+      .show + a, ul{
+        display: none;
+      }
+      nav ul li,nav ul ul li{
+        display: block;
+        width: 100%;
+      }
+      nav ul li a:hover{
+        box-shadow:#fff;
+      }
+      .show{
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+        font-weight:bold;
+      }
+      .show:hover{
+        color: white;
+      }
+      .boxes{
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 60px;
+        line-height: 70px;
+        cursor: pointer;
+        padding-top: 20px;
+        font-size: 25px;
+      }
+      nav ul ul{
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      nav ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul li{
+        position: static;
+      }
+      [id^=btn]:checked + ul{
+        display: block;
+      }
+      nav ul ul li{
+        
+      }
+      span.cancel:before{
+        content: '\f00d';
+      }
+
+      .main-content {
+        height: 100vh;
+        background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(FRIENDS-FREN.png) no-repeat 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 103%;
+        padding: 0 1%;
+    }
+
+    .content {
+        position:absolute;
+        font-weight: lighter;
+        left: 50%;
+        top: 45%;
+        width: 50%;
+        max-width: 400px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        letter-spacing: 5px;
+        color: white;
+        padding-bottom: 15px;
+    }
+    
+    .content h2 {
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: white;
+        padding-top:15px;
+        padding-bottom: 15px;
+        font-weight: 100;
+    
+    }
+    
+    .icon-list {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-top: 40px;
+    }
+    
+    .icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.15);
+        margin: 0 10px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    
+    .icon:hover {
+        box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+    }
+    
+    .icon p {
+        color: white;
+        padding-top: 5px;
+        font-weight: 200;
+    }
+
+    /*HIGHSCHOOL*/
+
+.life h1 {
+    color: white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+
+.life h5 {
+    position: relative;
+    bottom: 100px;
+    left: 200px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.life h6 {
+    position: relative;
+    right: 190px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.life h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+
+.card01 {
+    background: url(FRIENDS/01.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card02 {
+    background: url(FRIENDS/02.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card04 {
+    background: url(FRIENDS/03.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card05 {
+    background: url(FRIENDS/04.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-left: 65px;
+}
+
+.box2 {
+    position:relative;
+    bottom: 185px;
+    left: 65px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.box3 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-right: 40px;
+}
+
+.box4 {
+    position:relative;
+    bottom: 185px;
+    right: 40px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.box5 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 200px;
+    margin-left: 65px;
+    position: relative;
+}
+
+.box6 {
+    position:relative;
+    bottom: 385px;
+    left: 65px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+/*life4*/
+
+.life4 {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background:#1b1b1b;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cardd {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.life4 h3 {
+    color:white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+
+.card11 {
+    background: url(mememe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card12 {
+    background: url(family.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card13 {
+    background: url(friend.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card14 {
+    background: url(games.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card15 {
+    background: url(music.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card16 {
+    background: url(movie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box101 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+}
+
+.box102 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 150px;
+}
+
+
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 20%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+
+
+
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+a {
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+/*----FOOTER----*/
+
+footer {
+    position: relative;
+    width: 103%;
+    height: 250px;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(genshin.jpg) no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+footer p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5px;
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 8%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+}
+
+@media all and (max-width: 425px) {
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background: #1b1b1b;
+        overflow-x: hidden;
+    }
+
+    /*NAV*/
+
+    nav {
+        background: #1b1b1b;
+        width: 104%;
+        position: relative;
+        right: 10px;
+        z-index: 1000;
+        transition: all .5s;
+    }
+    
+
+    nav ul li a::after {
+        content: '';
+        background: white;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+        transition: width 0.5s;
+    
+    }
+    
+    nav ul{
+        margin-right: 0px;
+        float: left;
+      }
+      nav .logo{
+        padding-left: 30px;
+        width: 100%;
+      }
+      .show + a, ul{
+        display: none;
+      }
+      nav ul li,nav ul ul li{
+        display: block;
+        width: 100%;
+      }
+      nav ul li a:hover{
+        box-shadow:#fff;
+      }
+      .show{
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+        font-weight:bold;
+      }
+      .show:hover{
+        color: white;
+      }
+      .boxes{
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        line-height: 70px;
+        cursor: pointer;
+        padding-top: 20px;
+        font-size: 25px;
+      }
+      nav ul ul{
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      nav ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul li{
+        position: static;
+      }
+      [id^=btn]:checked + ul{
+        display: block;
+      }
+      nav ul ul li{
+        
+      }
+      span.cancel:before{
+        content: '\f00d';
+      }
+
+      .main-content {
+        height: 100vh;
+        background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(FRIENDS-FREN.png) no-repeat 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 106%;
+        padding: 0 1%;
+    }
+
+    .content {
+        position:absolute;
+        font-weight: lighter;
+        left: 50%;
+        top: 45%;
+        width: 90%;
+        max-width: 400px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        letter-spacing: 5px;
+        color: white;
+        padding-bottom: 15px;
+    }
+    
+    .content h2 {
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: white;
+        padding-top:15px;
+        padding-bottom: 15px;
+        font-weight: 100;
+    
+    }
+    
+    .icon-list {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-top: 40px;
+    }
+    
+    .icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.15);
+        margin: 0 10px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    
+    .icon:hover {
+        box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+    }
+    
+    .icon p {
+        color: white;
+        padding-top: 5px;
+        font-weight: 200;
+    }
+
+    /*HIGHSCHOOL*/
+
+.life h1 {
+    color: white;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+
+.life h5 {
+    position: relative;
+    bottom: 100px;
+    left: 200px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.life h6 {
+    position: relative;
+    right: 190px;
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.life h2 {
+    color:white;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+
+.card01 {
+    background: url(FRIENDS/01.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card02 {
+    background: url(FRIENDS/02.jpg);
+    position: relative;
+    top: 250px;
+    left: 2px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card04 {
+    background: url(FRIENDS/03.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card05 {
+    background: url(FRIENDS/04.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card6 {
+    background: url(FRIENDS/05.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card7 {
+    background: url(FRIENDS/06.jpg);
+    position: relative;
+    left: 2px;
+    top: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card9 {
+    background: url(FRIENDS/07.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card10 {
+    background: url(FRIENDS/08.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.box {
+    display:block;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-left: 65px;
+}
+
+.box2 {
+    position:relative;
+    bottom: 300px;
+    left: 18px;
+    display:flex;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.box3 {
+    display: block;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+    margin-left: 65px;
+}
+
+.box4 {
+    position:relative;
+    bottom: 300px;
+    left: 18px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.box5 {
+    display: block;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 15px;
+    margin-left: 65px;
+    position: relative;
+}
+
+.box6 {
+    position:relative;
+    bottom: 300px;
+    left: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+/*life4*/
+
+.life4 {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background:#1b1b1b;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cardd {
+    height: 150px;
+    width: 200px;
+    padding: 20px 35px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    left: 100px;
+}
+
+.life4 h3 {
+    color:white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+
+.card11 {
+    background: url(mememe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card12 {
+    background: url(family.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card13 {
+    background: url(friend.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card14 {
+    background: url(games.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card15 {
+    background: url(music.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card16 {
+    background: url(movie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card21 {
+    background: url(FRIENDS/09.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card22 {
+    background: url(FRIENDS/10.jpg);
+    position: relative;
+    left: 2px;
+    top: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card23 {
+    background: url(FRIENDS/11.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card24 {
+    background: url(FRIENDS/12.jpg);
+    position: relative;
+    right: 13px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box101 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+}
+
+.box102 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 150px;
+}
+
+
+
+
+.card {
+    height: 200px;
+    width: 300px;
+    padding: 20px 35px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 20%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+
+
+
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+a {
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+/*----FOOTER----*/
+
+footer {
+    position: relative;
+    width: 106%;
+    height: 250px;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(genshin.jpg) no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+footer p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5px;
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/**/
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 40%;
+
+}
+
+.line2::before {
+    right: -5%;
+    
+}
+
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 20%;
+}
+
+.line3::after {
+    left: 20%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+}

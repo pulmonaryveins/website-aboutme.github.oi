@@ -1,0 +1,864 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #1b1b1b;
+}
+
+/*----MAIN----*/
+.main-content {
+    height: 50vh;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(GAMES/02.gif) no-repeat 100% 100%;
+    background-size: cover;
+    background-position:bottom;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 0 1%;
+}
+
+.content img {
+    height: 200px;
+    width: 200px;
+    border: 1px solid white;
+    margin-right: 150px;
+    border-radius: 200px;
+    margin-top: 20px;
+    
+}
+
+.content {
+    position:absolute;
+    font-weight: lighter;
+    left: 55%;
+    top: 30%;
+    width: 100%;
+    max-width: 600px;
+    transform: translate(-55%, 15%);
+    text-align: center;
+}
+
+.content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: white;
+    margin-top: 50px;
+    position: relative;
+    right: 70px;
+    font-weight:bold;
+}
+
+.content h2 {
+    font-size: 30px;
+    color: white;
+    padding-top:25px;
+    padding-bottom: 15px;
+    font-weight: bolder;
+    position: relative;
+    right: 65px;
+
+}
+
+.content h3 {
+    font-size: 13px;
+    color: white;
+    padding-top:10px;
+    padding-bottom: 15px;
+    font-weight: bolder;
+    position: relative;
+    right: 65px;
+
+}
+
+
+/*---OTHER---*/
+
+
+.line1 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 60px;
+    top: 10px;
+}
+
+.line1::after, .line1::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 45%;
+    top: 45%;
+}
+
+.line1::after {
+    left: 0;
+
+}
+
+.line1::before {
+    right: 0;
+    
+}
+
+/*----NAV----*/
+
+nav{
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+nav ul{
+  float: right;
+  padding-top: 20px;
+  margin-right: 100px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  margin: 0 5px;
+}
+nav ul li a {
+    color:white;
+    font-weight: 300;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    background: white;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transition: width 0.5s;
+
+}
+nav ul li a:hover{
+  color: white;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.boxes,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+/*----FA----*/
+
+.fa-arrow-right {
+    margin-top: 3px;
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.fa-angle-down {
+    margin-left: 7px;
+    font-size: 15px;
+
+}
+
+.fa-user {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-star-of-life {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-puzzle-piece {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-link {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.fa-arrow-up {
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 200px;
+    margin-bottom: 50px;
+}
+
+/*----COURSE----*/
+
+.icon-list {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 40px;
+}
+
+.icon {
+    position: relative;
+    right: 55px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.icon:hover {
+    box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+}
+
+.icon p {
+    color: white;
+    padding-top: 5px;
+}
+
+/*LINES*/
+
+.line2 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line2::after, .line2::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line2::after {
+    left: 30%;
+
+}
+
+.line2::before {
+    right: 20%;
+    
+}
+
+.line3 {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.line3::after, .line3::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: white;
+    width: 20%;
+    top: 45%;
+}
+
+.line3::after {
+    left: 30%;
+
+}
+
+.line3::before {
+    right: 20%;
+    
+}
+
+/*--main--*/
+
+.main{
+    margin-top: 600px;
+	width: 100%;
+	height: auto;
+	background: #1b1b1b;
+	font-family: 'Poppins', sans-serif;
+	padding: 50px 0;
+	display: grid;
+	place-items: center;
+}
+.main h3 {
+	font-size: 27px;
+	font-weight: 500;
+	color: white;
+	position: relative;
+}
+
+.main h2 {
+    font-size: 25px;
+    color: white;
+    padding-top:25px;
+    padding-bottom: 15px;
+    font-weight:400;
+    position: relative;
+    letter-spacing: 5px;
+}
+
+.main h1 {
+    font-size: 35px;
+    color: white;
+    margin-top: 100px;
+    font-weight:400;
+    letter-spacing: 5px;
+
+}
+
+/*--main2--*/
+
+.main2{
+    margin-top: 200px;
+	width: 100%;
+	height: auto;
+	background: #1b1b1b;
+	font-family: 'Poppins', sans-serif;
+	padding: 50px 0;
+	display: grid;
+	place-items: center;
+}
+.main2 h3 {
+	font-size: 27px;
+	font-weight: 500;
+	color: white;
+	position: relative;
+}
+
+.main2 h2 {
+    font-size: 25px;
+    color: white;
+    padding-top:25px;
+    padding-bottom: 15px;
+    font-weight:400;
+    position: relative;
+    letter-spacing: 5px;
+}
+
+.main2 h1 {
+    font-size: 35px;
+    color: white;
+    margin-top: 100px;
+    font-weight:400;
+    letter-spacing: 5px;
+
+}
+
+/*--main3--*/
+
+.main3{
+    margin-top: 200px;
+	width: 100%;
+	height: auto;
+	background: #1b1b1b;
+	font-family: 'Poppins', sans-serif;
+	padding: 50px 0;
+	display: grid;
+	place-items: center;
+}
+.main3 h3 {
+	font-size: 27px;
+	font-weight: 500;
+	color: white;
+	position: relative;
+}
+
+.main3 h2 {
+    font-size: 25px;
+    color: white;
+    padding-top:25px;
+    padding-bottom: 15px;
+    font-weight:400;
+    position: relative;
+    letter-spacing: 5px;
+}
+
+.main3 h1 {
+    font-size: 35px;
+    color: white;
+    margin-top: 100px;
+    font-weight:400;
+    letter-spacing: 5px;
+
+}
+
+
+
+/*BOX*/
+
+
+.container {
+    width: 1250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 50px;
+    position: relative;
+    top: 50px;
+    left: 0%;
+    width: 350px;
+    height: 350px;
+    transition: 0.3s ease-out;
+    box-shadow: 0 3px 15px rgba(255, 254, 254, 0.7);
+}
+
+.card .imgbox {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card .imgbox img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+.card .cont {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7));
+    transition: all 0.5s cubic-bezier(.48, -0.28, 0.41, 1.4);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card:hover .cont {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.card p {
+    color: white;
+    margin: 5px 0 0;
+    padding: 1em 1em;
+    transform: translateY(2em);
+    line-height: 1.1em;
+    transition: 0.3;
+    text-align: left;
+    opacity: 0;
+}
+
+.card:hover .cont p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card:hover {
+    box-shadow: 0  0 5em rgba(20, 18, 18, 0.7);
+}
+
+h2 {
+    text-align: center;
+
+}
+
+/*---LIFE---*/
+
+.life {
+    width: 100%;
+    height: 125vh;
+    margin: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 250px;
+    margin-bottom: 100px;
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 100px;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 150px;
+}
+
+
+
+.cardd {
+    height: 300px;
+    width: 400px;
+    padding: 20px 35px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cardd:hover {
+    box-shadow: 0 0 20px 0px rgba(250, 248, 248, 0.822);
+}
+
+.cardd1 {
+    background: url(mememe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cardd2 {
+    background: url(family.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cardd3 {
+    background: url(friend.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.cardd4 {
+    background: url(games.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.cardd5 {
+    background: url(music.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cardd6 {
+    background: url(movie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.life h1 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+.line1 {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 10px auto;
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.line::before, .line::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    display: block;
+}
+
+.life h5 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.life h6 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.life h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+
+a {
+    color:white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+/*---FOOTER---*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background:linear-gradient(rgba(20, 18, 18, 0.7), rgba(0, 0, 0, 0.7)), url(genshin.jpg) no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+footer p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 200px;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.social a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5px;
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+/*RESPONSIVE*/
+
+@media all and (max-width: 900px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        background: #1b1b1b;
+        overflow-x: hidden;
+    }
+
+    /*NAV*/
+
+    nav {
+        background: #1b1b1b;
+        width: 104%;
+        position: relative;
+        right: 10px;
+        z-index: 1000;
+        transition: all .5s;
+    }
+    
+
+    nav ul li a::after {
+        content: '';
+        background: white;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+        transition: width 0.5s;
+    
+    }
+    
+    nav ul{
+        margin-right: 0px;
+        float: left;
+      }
+      nav .logo{
+        padding-left: 30px;
+        width: 100%;
+      }
+      .show + a, ul{
+        display: none;
+      }
+      nav ul li,nav ul ul li{
+        display: block;
+        width: 100%;
+      }
+      nav ul li a:hover{
+        box-shadow:#fff;
+      }
+      .show{
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+        font-weight:bold;
+      }
+      .show:hover{
+        color: white;
+      }
+      .boxes{
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        padding-top: 20px;
+        font-size: 25px;
+      }
+      nav ul ul{
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      nav ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul a{
+        padding-left: 90px;
+      }
+      nav ul ul ul li{
+        position: static;
+      }
+      [id^=btn]:checked + ul{
+        display: block;
+      }
+      nav ul ul li{
+        
+      }
+      span.cancel:before{
+        content: '\f00d';
+      }
+}
